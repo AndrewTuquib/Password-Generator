@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <section class="hero">
+            <h1 class="head">Generate a</h1>
+            <h1 class="sub-head">random password</h1>
+            <h3>Never use an insecure password again.</h3>
+        </section>
+       
+        <div class="main-btn-container">
+            <button class="main-btn" onclick="genPass()" >Generate passwords</button>
+            <div class="slider">
+                <p>Select number of characters</p>
+                <input id="input" name="characters" type="range" min="8" max="15" step="1">
+                <label id="values" for="characters">10</label>
+            </div>            
+        </div>
+        
+        <div class="password-field">
+            <h5 class="passwords" id="password-1" onclick="copy('password-1')"></h5>
+            <h5 class="passwords" id="password-2" onclick="copy('password-2')"></h5>
+        </div>
+        <p class="copy-message" id="copy-message">Copied!</p>
+        <script src="index.js"></script>
+    </body>
+</html>
