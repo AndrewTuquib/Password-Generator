@@ -58,5 +58,5 @@ function copyMessage() {
     
     setTimeout( function() {
         document.getElementById("copy-message").style.display = "none";
-    }, 500); document.getElementById("copy-message").style.transition = "500ms ease-in-out";
+    }, 500); document.getElementById("copy-message").style.transition = "250ms ease-in-out";
 }
