@@ -12,7 +12,7 @@ const password2 = document.getElementById("password-2")
 const input = document.querySelector('input');
 const log = document.getElementById('values');
 let passwordLength = input.value - 2
-let genPass = document.getElementById('genPass-btn')
+const genPass = document.getElementById('genPass-btn')
 
 
 
