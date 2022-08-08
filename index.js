@@ -12,6 +12,12 @@ const password2 = document.getElementById("password-2")
 const input = document.querySelector('input');
 const log = document.getElementById('values');
 let passwordLength = input.value - 2
+let genPass = document.getElementById('genPass-btn')
+
+
+
+password1.textContent = "* * * * * * * *"
+password2.textContent = "* * * * * * * *"
 
 
 
@@ -22,8 +28,7 @@ function updateValue(e) {
   passwordLength = e.target.value
 }
 
-password1.textContent = "* * * * * * * *"
-password2.textContent = "* * * * * * * *"
+
 
 function generateRandomChar(){
     let randomChar = Math.floor(Math.random()*characters.length)
@@ -39,10 +44,17 @@ function generatePassword(){
     return randomPassword
 }
 
-function genPass(){
+genPass.addEventListener('click', function(){
     password1.textContent = generatePassword()
     password2.textContent = generatePassword()
-}
+}) 
+
+password1.addEventListener('click', function() {
+    copy(this.id)
+})
+password2.addEventListener('click', function() {
+    copy(this.id)
+})
 
 function copy(id) {
     const content = document.getElementById(id).textContent
